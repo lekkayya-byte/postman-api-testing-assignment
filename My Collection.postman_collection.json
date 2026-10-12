@@ -1,0 +1,254 @@
+{
+  "info": {
+    "_postman_id": "76463829-fee7-4418-b60b-ba53f004c818",
+    "name": "My Collection",
+    "description": "### Welcome to Postman! This is your first collection.\n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests  \n• Test your API in real-world scenarios  \n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58896386",
+    "_collection_link": "https://go.postman.co/collection/58896386-76463829-fee7-4418-b60b-ba53f004c818?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get data",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "m.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Request method is GET\", function () {\n    pm.expect(pm.request.method).to.eql(\"GET\");\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://postman-echo.com/get",
+          "protocol": "https",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "get"
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": [
+        {
+          "name": "Get data",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://postman-echo.com/get",
+              "protocol": "https",
+              "host": [
+                "postman-echo",
+                "com"
+              ],
+              "path": [
+                "get"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "date",
+              "value": "Mon, 12 Oct 2026 12:11:28 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"2cc-yEpYB9tRUrEJDVJH2KlDz1vHp2k\""
+            },
+            {
+              "key": "vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "x-envoy-upstream-service-time",
+              "value": "5"
+            },
+            {
+              "key": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "set-cookie",
+              "value": "sails.sid=s%3A983MXQKAtJbDuna5CCvDJLV6w75gi3do.ES1NLP2yui%2BxiexjCCDH5ULG8E7VNy35NTEi0e0RR9U; Path=/; HttpOnly"
+            },
+            {
+              "key": "set-cookie",
+              "value": "__cf_bm=3gt1_ObvXr7FtJtRApWa67RCa.qerWVk4R6.wu_Jbpw-1791807088.9431565-1.0.1.1-FxAlKHEpPKgqrSlqMWu9MAxsNN27XynSaEKM80vsilqkVuQrhdu1XZPXULTBYkQ.b41UyTan_OO5_m_i3a6SN0edjtGlSH5l3s297TLKNCk0m5rCtkJscEJm9yr.dtGZ; HttpOnly; SameSite=None; Secure; Path=/; Domain=postman-echo.com; Expires=Mon, 12 Oct 2026 12:41:28 GMT"
+            },
+            {
+              "key": "set-cookie",
+              "value": "_cfuvid=FMjGEp565M_8PoMHJfDw_SFuBtjltCvkR_oC5e71TEo-1791807088.9431565-1.0.1.1-4f.inyROZFKiQiLafpbqlm8wMdq3hGaMt2b2ngn9CDo; HttpOnly; SameSite=None; Secure; Path=/; Domain=postman-echo.com"
+            },
+            {
+              "key": "content-encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "cf-ray",
+              "value": "a49601e1e9260fb6-IAD"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"args\": {},\n  \"headers\": {\n    \"host\": \"postman-echo.com\",\n    \"x-forwarded-proto\": \"https\",\n    \"accept-encoding\": \"gzip, br\",\n    \"accept\": \"*/*\",\n    \"user-agent\": \"PostmanRuntime/2.11.0\",\n    \"cache-control\": \"no-cache\",\n    \"postman-token\": \"65062ee8-a7e1-4758-8690-0af45df6e0c4\",\n    \"cookie\": \"__cf_bm=ZCBlk_xYEnyM3fjJbBTRf3tmTBtEISp9eiDIbiA2OBY-1791806390.7559538-1.0.1.1-rhdf6x6Oq3_XEPcxo1FFifKo8t9Lp5r_wvPqbkUxwIc5ksVQJdexs1buVmpIl9zCLjjTA1Ts8uIEEyHblsZK0KFz9tGMYS8ID7sH4FoghSZlhI3o2Qn7vvF39aaYVOBT; _cfuvid=7M4aCqC_QY8qdqeRYQk7AtMp2TUjiIrCxGzFZEaY44g-1791806390.7559538-1.0.1.1-FasvlKXNvDUMKnhq53PUeriffGp.wtPRQsOK1pDuBSE; sails.sid=s%3AcI7CfzLo0Q4cahjWU5yshOZOZ1i3TUek.hPpl5P%2B0J%2Bko3Ae9VGK8nj9j9paGlJla1W45DKtZrWA\"\n  },\n  \"url\": \"https://postman-echo.com/get\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Post data",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 404\", function () {\n    pm.response.to.have.status(404);\n});\n\npm.test(\"Request method is POST\", function () {\n    pm.expect(pm.request.method).to.eql(\"POST\");\n});\n\npm.test(\"Response time is less than 3000 ms\", function () {\n    pm.expect(pm.response.responseTime).to.be.below(3000);\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"name\": \"Add your name in the body\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://postman-echo.com/status/404",
+          "protocol": "https",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "status",
+            "404"
+          ]
+        },
+        "description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+      },
+      "response": [
+        {
+          "name": "Post data",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"name\": \"Add your name in the body\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://postman-echo.com/status/404",
+              "protocol": "https",
+              "host": [
+                "postman-echo",
+                "com"
+              ],
+              "path": [
+                "status",
+                "404"
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "date",
+              "value": "Mon, 12 Oct 2026 12:19:40 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "x-envoy-upstream-service-time",
+              "value": "12"
+            },
+            {
+              "key": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "set-cookie",
+              "value": "sails.sid=s%3Af31qE2wTOYEAFuggQBaujnY5VGWiz3Jc.mZG%2BtMqxF3SbQPNWMwMYzxGJjtZTNtrl1b8O5zohFII; Path=/; HttpOnly"
+            },
+            {
+              "key": "set-cookie",
+              "value": "__cf_bm=1iH_Jn59_GnDPaw.19_csePS0fqDf4EwzQOfPg2I2L4-1791807580.1998174-1.0.1.1-Lg77D.zomYlUiFYo1q_5_mh8nxuu0CYl9g.PMmL1Q6l66Y1zozf298BHSFWoAr7RCu43NKkBt42OJamYTWpNtYpQORK6WiZidwy0VH_erEJKJanPX9Yjf4D8..Em40gj; HttpOnly; SameSite=None; Secure; Path=/; Domain=postman-echo.com; Expires=Mon, 12 Oct 2026 12:49:40 GMT"
+            },
+            {
+              "key": "set-cookie",
+              "value": "_cfuvid=HaR2MjP8ZxmIkuzDUBFdvOcRDWsCitcPmHpXq_cfYeA-1791807580.1998174-1.0.1.1-kGqUer9pg9GvH2BaMwEH6Bz1uWwz6yyaGECSY10qEn8; HttpOnly; SameSite=None; Secure; Path=/; Domain=postman-echo.com"
+            },
+            {
+              "key": "content-encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "cf-ray",
+              "value": "a4960de03ec0d68c-IAD"
+            }
+          ],
+          "cookie": [],
+          "body": ""
+        }
+      ]
+    }
+  ]
+}
